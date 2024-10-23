@@ -1,0 +1,43 @@
+
+  
+
+.container {
+    padding:30vh;
+    text-align: center;
+    font-family:'Times New Roman', Courier, monospace;
+}
+
+.fortune {
+    opacity: 0; 
+    transition: opacity 1s ease;
+    padding-top:2.5vh;
+    border-top: 0.01rem solid rgb(199, 199, 199);
+}
+
+
+#button {
+    
+    background: none;
+    font-family: 'Times New Roman', Courier, monospace;
+    font-size:16px;
+    border:0 solid rgb(199, 199, 199);
+}
+
+#glass {
+    border-radius: 50%;
+    background: none;
+    max-width:75%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 2);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+#glass:hover {
+    box-shadow: 0 0 50px rgba(73, 43, 131, 0.8); 
+    cursor:help;
+}
+
+#greeting {
+    font-size: larger;
+    padding-bottom:1vh;
+    
+}

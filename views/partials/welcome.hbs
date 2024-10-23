@@ -1,0 +1,6 @@
+<p id="greeting"></p>
+<script>
+// Retrieve the user's name from local storage and display it
+const name = localStorage.getItem('userName') || 'Guest';
+document.getElementById('greeting').textContent = `${name}, this one is prepared especially for you:`;
+</script>

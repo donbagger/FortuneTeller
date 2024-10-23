@@ -1,0 +1,11 @@
+
+
+<button id="button" ><img src="/img/glass.png" alt="Click Me" style="background: none; border: none;" id="glass"/></button>
+
+<script>
+  document.getElementById('button').addEventListener('click', function() {
+    window.location.href = '/random';
+  });
+  const userName = "{{name}}";
+localStorage.setItem('userName', userName);
+</script>
