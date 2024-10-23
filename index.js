@@ -29,9 +29,15 @@ const countryToName = {
     'Sri Lanka': 'Nigel',
     'India': 'Varun',
     'Indonesia': 'Riska',
-    'Poland': 'Michałek lub Kubuś',
+    'Poland': 'Polaczku',
     'United Arab Emirates': 'Mateusz'
   };
+
+  const cityToName = {
+    'Poznan' : 'Penero Okropna Poznańska',
+    'Gdansk' : 'Gruzin',
+    'Warszawa' : 'Elegancki Stołeczniaku'
+  }
 
 
 // Routing
@@ -42,7 +48,7 @@ app.get('/', async (req, res) => {
         const response = await axios.get(`http://ip-api.com/json/${ip}`);
         const country = response.data.country;
         const city = response.data.city;
-        const name = countryToName[country] || 'Guest'; 
+        const name = cityToName[city] || countryToName[country] || 'Guest'; 
     
   res.render('home', { name, country });
   console.log(country, name, city);  
