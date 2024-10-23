@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const exphbs = require('express-handlebars');
 const axios = require('axios');
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Set up Handlebars as the template engine
 app.engine('hbs', exphbs.engine({
@@ -61,5 +61,5 @@ app.use((req, res) => {
 });
 
 app.listen(PORT, function () {
-    console.log(`Server started at http://localhost:${PORT}`);
+    console.log(`Server started on port: ${PORT}`);
   });
