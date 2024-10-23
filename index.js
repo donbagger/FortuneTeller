@@ -13,9 +13,11 @@ app.engine('hbs', exphbs.engine({
       },
   }));
 app.set('view engine', 'hbs');
+app.set('views', path.join(__dirname, 'views'));
+
 
 // Serve static files
-app.use(express.static('public'));
+app.use(express.static('public', path.join(__dirname, 'public')));
 
 // Creating Random route
 const fortunes = ['fortune1', 'fortune2', 'fortune3', 'fortune4', 'fortune5', 'fortune6', 'fortune7', 'fortune8', 'fortune9', 'fortune10'];
