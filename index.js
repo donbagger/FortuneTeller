@@ -36,7 +36,7 @@ const countryToName = {
 
 // Routing
 app.get('/', async (req, res) => {
-    const ip = req.ip === '::1' ? '203.94.72.111' : req.ip;
+    const ip = req.headers['x-forwarded-for'] || req.ip;
 
     try {
         const response = await axios.get(`http://ip-api.com/json/${ip}`);
