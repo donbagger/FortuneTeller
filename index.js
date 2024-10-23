@@ -48,13 +48,13 @@ app.get('/', async (req, res) => {
         const response = await axios.get(`http://ip-api.com/json/${ip}`);
         const country = response.data.country;
         const city = response.data.city;
-        const name = cityToName[city] || countryToName[country] || 'Guest'; 
+        const name = cityToName[city] || countryToName[country] || 'Chris'; 
     
   res.render('home', { name, country });
   console.log(country, name, city);  
     } catch (err) {
         console.error('Error Fetching Location:', err);
-        res.render('home', {name: 'Guest', country: null});
+        res.render('home', {name: 'Chris', country: null});
     }
 });
 
