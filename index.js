@@ -3,6 +3,7 @@ const app = express();
 const exphbs = require('express-handlebars');
 const axios = require('axios');
 const PORT = process.env.PORT || 3000;
+const path = require('path');
 
 // Set up Handlebars as the template engine
 app.engine('hbs', exphbs.engine({
