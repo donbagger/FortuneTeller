@@ -26,7 +26,7 @@ const fortunes = ['fortune1', 'fortune2', 'fortune3', 'fortune4', 'fortune5', 'f
 // mapping names to countries
 const countryToName = {
     'Canada': 'Emi',
-    'Sri Lanka': 'Nigel',
+    'Sri Lanka': 'Thinal',
     'India': 'Varun',
     'Indonesia': 'Riska',
     'Poland': 'Polaczku',
